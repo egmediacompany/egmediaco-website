@@ -929,24 +929,6 @@ section { padding: 60px 24px; }
     <div id="listings-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;">
 
 ```
-<!-- LIGHTBOX GALLERY -->
-<div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(14,14,12,0.96);z-index:500;flex-direction:column;">
-  <div style="display:flex;align-items:center;justify-content:space-between;padding:24px 40px;border-bottom:1px solid rgba(255,255,255,0.1);">
-    <div>
-      <span id="lb-listing-name" style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:#FAF8F5;"></span>
-      <span id="lb-photo-label" style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(250,248,245,0.45);margin-left:20px;"></span>
-    </div>
-    <button onclick="closeLightbox()" style="background:none;border:none;color:#FAF8F5;font-size:28px;cursor:pointer;padding:4px 12px;">✕</button>
-  </div>
-  <div style="flex:1;display:flex;align-items:center;justify-content:center;position:relative;padding:20px;">
-    <button onclick="lbPrev()" style="position:absolute;left:24px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#FAF8F5;font-size:24px;width:52px;height:52px;cursor:pointer;transition:background 0.2s;" onmouseover="this.style.background='rgba(184,151,90,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">‹</button>
-    <img id="lb-main-img" src="" alt="" style="max-height:70vh;max-width:calc(100% - 140px);object-fit:contain;display:block;">
-    <button onclick="lbNext()" style="position:absolute;right:24px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#FAF8F5;font-size:24px;width:52px;height:52px;cursor:pointer;transition:background 0.2s;" onmouseover="this.style.background='rgba(184,151,90,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">›</button>
-  </div>
-  <div id="lb-thumbnails" style="display:flex;gap:8px;padding:16px 40px;overflow-x:auto;border-top:1px solid rgba(255,255,255,0.08);"></div>
-  <div style="text-align:center;padding:12px;color:rgba(250,248,245,0.35);font-size:11px;letter-spacing:0.1em;" id="lb-counter"></div>
-</div>
-
     <div style="text-align:center;margin-top:60px;">
   <p style="font-size:13px;color:#5A5750;margin-bottom:24px;font-weight:300;">Ready to see your listing here?</p>
   <a href="#" class="btn-primary" onclick="showPage('booking-page')">Book Your Shoot</a>
@@ -1593,6 +1575,26 @@ document.addEventListener("keydown", function(e) {
 
 try { renderListings(); } catch(err) { console.log('render err',err); }
 </script>
+
+```
+<!-- LIGHTBOX GALLERY -->
+<div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(14,14,12,0.96);z-index:500;flex-direction:column;">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:24px 40px;border-bottom:1px solid rgba(255,255,255,0.1);">
+    <div>
+      <span id="lb-listing-name" style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:#FAF8F5;"></span>
+      <span id="lb-photo-label" style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(250,248,245,0.45);margin-left:20px;"></span>
+    </div>
+    <button onclick="closeLightbox()" style="background:none;border:none;color:#FAF8F5;font-size:28px;cursor:pointer;padding:4px 12px;">✕</button>
+  </div>
+  <div style="flex:1;display:flex;align-items:center;justify-content:center;position:relative;padding:20px;">
+    <button onclick="lbPrev()" style="position:absolute;left:24px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#FAF8F5;font-size:24px;width:52px;height:52px;cursor:pointer;transition:background 0.2s;" onmouseover="this.style.background='rgba(184,151,90,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">‹</button>
+    <img id="lb-main-img" src="" alt="" style="max-height:70vh;max-width:calc(100% - 140px);object-fit:contain;display:block;">
+    <button onclick="lbNext()" style="position:absolute;right:24px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#FAF8F5;font-size:24px;width:52px;height:52px;cursor:pointer;transition:background 0.2s;" onmouseover="this.style.background='rgba(184,151,90,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">›</button>
+  </div>
+  <div id="lb-thumbnails" style="display:flex;gap:8px;padding:16px 40px;overflow-x:auto;border-top:1px solid rgba(255,255,255,0.08);"></div>
+  <div style="text-align:center;padding:12px;color:rgba(250,248,245,0.35);font-size:11px;letter-spacing:0.1em;" id="lb-counter"></div>
+</div>
+```
 
 </body>
 </html>
