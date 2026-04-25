@@ -27,8 +27,8 @@ html { scroll-behavior: smooth; }
 
 body {
 font-family: ‘Jost’, sans-serif;
-background: var(–warm-white);
-color: var(–charcoal);
+background: #FAF8F5;
+color: #1C1C1A;
 overflow-x: hidden;
 }
 
@@ -41,7 +41,7 @@ padding: 22px 60px;
 ```
 background: rgba(250,248,245,0.92);
 backdrop-filter: blur(12px);
-border-bottom: 1px solid var(--border);
+border-bottom: 1px solid rgba(28,28,26,0.12);
 transition: padding 0.3s;
 ```
 
@@ -49,18 +49,18 @@ transition: padding 0.3s;
 .nav-logo {
 font-family: ‘Cormorant Garamond’, serif;
 font-size: 22px; font-weight: 300; letter-spacing: 0.12em;
-color: var(–charcoal) !important; text-decoration: none !important;
+color: #1C1C1A !important; text-decoration: none !important;
 }
-.nav-logo span { color: var(–gold) !important; }
+.nav-logo span { color: #B8975A !important; }
 .nav-links a {
 font-family: ‘Jost’, sans-serif; font-size: 11px; font-weight: 400;
 letter-spacing: 0.18em; text-transform: uppercase;
-color: var(–charcoal) !important; text-decoration: none !important;
+color: #1C1C1A !important; text-decoration: none !important;
 transition: color 0.2s;
 }
-.nav-links a:hover { color: var(–gold) !important; }
+.nav-links a:hover { color: #B8975A !important; }
 .nav-cta {
-background: var(–charcoal) !important; color: var(–warm-white) !important;
+background: #1C1C1A !important; color: #FAF8F5 !important;
 padding: 10px 24px; letter-spacing: 0.14em !important;
 }
 .nav-links { display: flex; gap: 36px; list-style: none; }
@@ -82,44 +82,44 @@ background: #EDEAE4;
 }
 .hero-eyebrow {
 font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
-color: var(–gold); margin-bottom: 28px; font-weight: 400;
+color: #B8975A; margin-bottom: 28px; font-weight: 400;
 }
 .hero-title {
 font-family: ‘Cormorant Garamond’, serif;
 font-size: clamp(52px, 6vw, 84px); font-weight: 500; line-height: 1.06;
 color: #0E0E0C; margin-bottom: 32px;
 }
-.hero-title em { font-style: italic; color: var(–gold); }
+.hero-title em { font-style: italic; color: #B8975A; }
 .hero-sub {
 font-size: 14px; font-weight: 300; line-height: 1.8; color: #3D3B37;
 max-width: 400px; margin-bottom: 48px;
 }
 .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
 .btn-primary {
-background: var(–charcoal); color: var(–warm-white);
+background: #1C1C1A; color: #FAF8F5;
 padding: 16px 40px; font-family: ‘Jost’, sans-serif;
 font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
 border: none; cursor: pointer; transition: background 0.25s;
 text-decoration: none; display: inline-block;
 }
-.btn-primary:hover { background: var(–gold); }
+.btn-primary:hover { background: #B8975A; }
 .btn-outline {
-background: transparent; color: var(–gold);
+background: transparent; color: #B8975A;
 padding: 15px 40px; font-family: ‘Jost’, sans-serif;
 font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
-border: 1px solid var(–gold); cursor: pointer; transition: all 0.25s;
+border: 1px solid #B8975A; cursor: pointer; transition: all 0.25s;
 text-decoration: none; display: inline-block;
 }
-.btn-outline:hover { background: var(–gold); color: var(–warm-white); }
+.btn-outline:hover { background: #B8975A; color: #FAF8F5; }
 .hero-right {
-position: relative; overflow: hidden; background: var(–charcoal);
+position: relative; overflow: hidden; background: #1C1C1A;
 }
 .hero-grid {
 display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
 height: 100%; gap: 3px;
 }
 .hero-img {
-background: var(–muted); overflow: hidden; position: relative;
+background: #5A5750; overflow: hidden; position: relative;
 }
 .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; }
 .hero-img-placeholder {
@@ -130,14 +130,14 @@ color: rgba(255,255,255,0.2); font-family: ‘Cormorant Garamond’, serif;
 font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;
 }
 .hero-stat-bar {
-grid-column: 1/-1; background: var(–gold);
+grid-column: 1/-1; background: #B8975A;
 display: flex; align-items: center; justify-content: space-around;
 padding: 20px; gap: 20px; max-height: 80px;
 }
 .hero-stat { text-align: center; }
 .hero-stat-num {
 font-family: ‘Cormorant Garamond’, serif; font-size: 22px; font-weight: 300;
-color: var(–warm-white); display: block;
+color: #FAF8F5; display: block;
 }
 .hero-stat-label {
 font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
@@ -150,29 +150,29 @@ padding: 100px 60px;
 }
 .section-eyebrow {
 font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
-color: var(–gold); margin-bottom: 16px; font-weight: 400;
+color: #B8975A; margin-bottom: 16px; font-weight: 400;
 }
 .section-title {
 font-family: ‘Cormorant Garamond’, serif;
 font-size: clamp(36px, 4vw, 56px); font-weight: 300; line-height: 1.1;
-color: var(–charcoal); margin-bottom: 20px;
+color: #1C1C1A; margin-bottom: 20px;
 }
-.section-title em { font-style: italic; color: var(–gold); }
+.section-title em { font-style: italic; color: #B8975A; }
 .section-sub {
 font-size: 14px; font-weight: 300; line-height: 1.9; color: #3D3B37;
 max-width: 520px;
 }
 .divider {
-width: 48px; height: 1px; background: var(–gold); margin: 24px 0;
+width: 48px; height: 1px; background: #B8975A; margin: 24px 0;
 }
 
 /* ── ABOUT STRIP ── */
 #about-strip {
-background: var(–charcoal); color: var(–warm-white);
+background: #1C1C1A; color: #FAF8F5;
 padding: 70px 60px;
 display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
 }
-#about-strip .section-title { color: var(–warm-white); }
+#about-strip .section-title { color: #FAF8F5; }
 #about-strip .section-sub { color: rgba(250,248,245,0.65); max-width: 440px; }
 .about-features { display: flex; flex-direction: column; gap: 24px; }
 .about-feature { display: flex; gap: 20px; align-items: flex-start; }
@@ -183,12 +183,12 @@ font-size: 16px;
 }
 .about-feature-text h4 {
 font-family: ‘Cormorant Garamond’, serif; font-size: 18px; font-weight: 400;
-color: var(–warm-white); margin-bottom: 4px;
+color: #FAF8F5; margin-bottom: 4px;
 }
 .about-feature-text p { font-size: 13px; color: rgba(250,248,245,0.55); line-height: 1.7; font-weight: 300; }
 
 /* ── PACKAGES ── */
-#packages { background: var(–cream); }
+#packages { background: #F0EDE8; }
 .packages-header { text-align: center; margin-bottom: 64px; }
 .packages-header .section-sub { margin: 0 auto; }
 .packages-header .divider { margin: 24px auto; }
@@ -197,78 +197,78 @@ display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
 max-width: 1100px; margin: 0 auto;
 }
 .package-card {
-background: var(–warm-white); padding: 48px 36px;
+background: #FAF8F5; padding: 48px 36px;
 position: relative; transition: transform 0.3s, box-shadow 0.3s;
 cursor: pointer;
 }
 .package-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
 .package-card.featured {
-background: var(–charcoal); color: var(–warm-white);
+background: #1C1C1A; color: #FAF8F5;
 }
 .package-badge {
 position: absolute; top: 24px; right: 24px;
-background: var(–gold); color: var(–warm-white);
+background: #B8975A; color: #FAF8F5;
 font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
 padding: 5px 12px;
 }
 .package-tier {
 font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase;
-color: var(–gold); margin-bottom: 12px; font-weight: 400;
+color: #B8975A; margin-bottom: 12px; font-weight: 400;
 }
 .package-name {
 font-family: ‘Cormorant Garamond’, serif; font-size: 30px; font-weight: 300;
 margin-bottom: 8px; color: inherit;
 }
-.package-card.featured .package-name { color: var(–warm-white); }
+.package-card.featured .package-name { color: #FAF8F5; }
 .package-price {
 font-family: ‘Cormorant Garamond’, serif; font-size: 48px; font-weight: 300;
-color: var(–gold); line-height: 1; margin: 20px 0 4px;
+color: #B8975A; line-height: 1; margin: 20px 0 4px;
 }
 .package-price span { font-size: 20px; vertical-align: top; margin-top: 10px; display: inline-block; }
-.package-note { font-size: 11px; color: var(–muted); margin-bottom: 28px; letter-spacing: 0.05em; }
+.package-note { font-size: 11px; color: #5A5750; margin-bottom: 28px; letter-spacing: 0.05em; }
 .package-card.featured .package-note { color: rgba(250,248,245,0.5); }
-.package-divider { height: 1px; background: var(–border); margin-bottom: 28px; }
+.package-divider { height: 1px; background: rgba(28,28,26,0.12); margin-bottom: 28px; }
 .package-card.featured .package-divider { background: rgba(255,255,255,0.12); }
 .package-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px; }
 .package-features li {
-font-size: 13px; font-weight: 300; color: var(–muted);
+font-size: 13px; font-weight: 300; color: #5A5750;
 display: flex; gap: 10px; align-items: flex-start; line-height: 1.5;
 }
 .package-card.featured .package-features li { color: rgba(250,248,245,0.7); }
-.package-features li::before { content: ‘—’; color: var(–gold); flex-shrink: 0; }
+.package-features li::before { content: ‘—’; color: #B8975A; flex-shrink: 0; }
 .pkg-btn {
 width: 100%; padding: 14px; font-family: ‘Jost’, sans-serif;
 font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
-border: 1px solid var(–charcoal); background: transparent;
-color: var(–charcoal); cursor: pointer; transition: all 0.25s;
+border: 1px solid #1C1C1A; background: transparent;
+color: #1C1C1A; cursor: pointer; transition: all 0.25s;
 }
-.pkg-btn:hover { background: var(–charcoal); color: var(–warm-white); }
+.pkg-btn:hover { background: #1C1C1A; color: #FAF8F5; }
 .package-card.featured .pkg-btn {
-background: var(–gold); border-color: var(–gold); color: var(–warm-white);
+background: #B8975A; border-color: #B8975A; color: #FAF8F5;
 }
-.package-card.featured .pkg-btn:hover { background: var(–gold-light); border-color: var(–gold-light); }
+.package-card.featured .pkg-btn:hover { background: #D4B07A; border-color: #D4B07A; }
 
 /* ── ADD-ONS ── */
 .addons-section { margin-top: 64px; text-align: center; }
 .addons-section h3 {
 font-family: ‘Cormorant Garamond’, serif; font-size: 28px; font-weight: 300;
-margin-bottom: 32px; color: var(–charcoal);
+margin-bottom: 32px; color: #1C1C1A;
 }
 .addons-grid {
 display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
 max-width: 1100px; margin: 0 auto;
 }
 .addon-card {
-background: var(–warm-white); padding: 28px 20px; text-align: left;
-border: 1px solid var(–border); transition: border-color 0.2s;
+background: #FAF8F5; padding: 28px 20px; text-align: left;
+border: 1px solid rgba(28,28,26,0.12); transition: border-color 0.2s;
 }
-.addon-card:hover { border-color: var(–gold); }
+.addon-card:hover { border-color: #B8975A; }
 .addon-name { font-family: ‘Cormorant Garamond’, serif; font-size: 18px; margin-bottom: 4px; }
-.addon-price { color: var(–gold); font-size: 13px; font-weight: 400; }
-.addon-desc { font-size: 12px; color: var(–muted); margin-top: 8px; line-height: 1.6; font-weight: 300; }
+.addon-price { color: #B8975A; font-size: 13px; font-weight: 400; }
+.addon-desc { font-size: 12px; color: #5A5750; margin-top: 8px; line-height: 1.6; font-weight: 300; }
 
 /* ── PORTFOLIO ── */
-#portfolio { background: var(–warm-white); }
+#portfolio { background: #FAF8F5; }
 .portfolio-header { margin-bottom: 48px; }
 .portfolio-filter {
 display: flex; gap: 0; margin-bottom: 48px;
@@ -276,12 +276,12 @@ display: flex; gap: 0; margin-bottom: 48px;
 .filter-btn {
 padding: 10px 28px; font-family: ‘Jost’, sans-serif;
 font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-border: 1px solid var(–border); background: transparent;
-color: var(–muted); cursor: pointer; transition: all 0.2s;
+border: 1px solid rgba(28,28,26,0.12); background: transparent;
+color: #5A5750; cursor: pointer; transition: all 0.2s;
 margin-right: -1px;
 }
 .filter-btn.active, .filter-btn:hover {
-background: var(–charcoal); color: var(–warm-white); border-color: var(–charcoal); z-index: 1;
+background: #1C1C1A; color: #FAF8F5; border-color: #1C1C1A; z-index: 1;
 }
 .portfolio-grid {
 display: grid;
@@ -290,7 +290,7 @@ gap: 12px;
 max-width: 1200px;
 }
 .port-item {
-background: var(–cream); overflow: hidden; position: relative;
+background: #F0EDE8; overflow: hidden; position: relative;
 cursor: pointer; transition: transform 0.3s;
 height: 280px;
 }
@@ -313,7 +313,7 @@ flex-direction: column; gap: 8px;
 .port-placeholder svg { opacity: 0.3; }
 .port-placeholder-text {
 font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
-color: var(–muted); opacity: 0.6;
+color: #5A5750; opacity: 0.6;
 }
 .port-overlay {
 position: absolute; inset: 0;
@@ -323,13 +323,13 @@ opacity: 0; transition: opacity 0.3s;
 }
 .port-info h4 {
 font-family: ‘Cormorant Garamond’, serif; font-size: 20px; font-weight: 300;
-color: var(–warm-white); margin-bottom: 4px;
+color: #FAF8F5; margin-bottom: 4px;
 }
 .port-info p { font-size: 11px; color: rgba(250,248,245,0.6); letter-spacing: 0.1em; }
 
 /* ── TESTIMONIALS ── */
-#testimonials { background: var(–charcoal); padding: 100px 60px; }
-#testimonials .section-title { color: var(–warm-white); }
+#testimonials { background: #1C1C1A; padding: 100px 60px; }
+#testimonials .section-title { color: #FAF8F5; }
 .testimonials-layout {
 display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start;
 margin-top: 60px;
@@ -339,56 +339,56 @@ margin-top: 60px;
 padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
 cursor: pointer; transition: color 0.2s;
 }
-.t-nav-item.active { border-left: 2px solid var(–gold); padding-left: 16px; }
+.t-nav-item.active { border-left: 2px solid #B8975A; padding-left: 16px; }
 .t-nav-name {
 font-family: ‘Cormorant Garamond’, serif; font-size: 18px; font-weight: 300;
 color: rgba(250,248,245,0.5); transition: color 0.2s;
 }
-.t-nav-item.active .t-nav-name { color: var(–warm-white); }
+.t-nav-item.active .t-nav-name { color: #FAF8F5; }
 .t-nav-role { font-size: 11px; color: rgba(250,248,245,0.3); letter-spacing: 0.1em; margin-top: 2px; }
 .testimonial-content { padding: 20px 0; }
 .t-quote {
 font-family: ‘Cormorant Garamond’, serif; font-size: clamp(22px, 3vw, 34px);
-font-weight: 300; line-height: 1.5; color: var(–warm-white);
+font-weight: 300; line-height: 1.5; color: #FAF8F5;
 margin-bottom: 32px; font-style: italic;
 }
-.t-stars { color: var(–gold); font-size: 16px; margin-bottom: 16px; letter-spacing: 3px; }
+.t-stars { color: #B8975A; font-size: 16px; margin-bottom: 16px; letter-spacing: 3px; }
 .t-meta { font-size: 12px; color: rgba(250,248,245,0.4); letter-spacing: 0.1em; }
 
 /* ── BOOKING ── */
-#booking { background: var(–cream); }
+#booking { background: #F0EDE8; }
 .booking-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
 .booking-info { padding-top: 10px; }
 .booking-steps { display: flex; flex-direction: column; gap: 28px; margin-top: 40px; }
 .booking-step { display: flex; gap: 20px; align-items: flex-start; }
 .step-num {
-width: 36px; height: 36px; border: 1px solid var(–gold);
+width: 36px; height: 36px; border: 1px solid #B8975A;
 display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-font-family: ‘Cormorant Garamond’, serif; font-size: 18px; color: var(–gold);
+font-family: ‘Cormorant Garamond’, serif; font-size: 18px; color: #B8975A;
 }
 .step-text h4 { font-family: ‘Cormorant Garamond’, serif; font-size: 18px; margin-bottom: 4px; }
-.step-text p { font-size: 13px; color: var(–muted); line-height: 1.6; font-weight: 300; }
+.step-text p { font-size: 13px; color: #5A5750; line-height: 1.6; font-weight: 300; }
 
 /* FORM */
-.booking-form { background: var(–warm-white); padding: 48px; }
+.booking-form { background: #FAF8F5; padding: 48px; }
 .form-title {
 font-family: ‘Cormorant Garamond’, serif; font-size: 28px; font-weight: 300;
-margin-bottom: 32px; color: var(–charcoal);
+margin-bottom: 32px; color: #1C1C1A;
 }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .form-group { margin-bottom: 20px; }
 .form-group label {
 display: block; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
-color: var(–muted); margin-bottom: 8px; font-weight: 400;
+color: #5A5750; margin-bottom: 8px; font-weight: 400;
 }
 .form-group input, .form-group select, .form-group textarea {
-width: 100%; padding: 14px 16px; border: 1px solid var(–border);
-background: var(–warm-white); font-family: ‘Jost’, sans-serif;
-font-size: 14px; font-weight: 300; color: var(–charcoal);
+width: 100%; padding: 14px 16px; border: 1px solid rgba(28,28,26,0.12);
+background: #FAF8F5; font-family: ‘Jost’, sans-serif;
+font-size: 14px; font-weight: 300; color: #1C1C1A;
 transition: border-color 0.2s; outline: none; appearance: none;
 }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-border-color: var(–gold);
+border-color: #B8975A;
 }
 .form-group textarea { height: 100px; resize: vertical; }
 .form-group select { background-image: url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ width=‘12’ height=‘8’%3E%3Cpath d=‘M1 1l5 5 5-5’ stroke=’%237A7770’ stroke-width=‘1.5’ fill=‘none’/%3E%3C/svg%3E”); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
@@ -398,96 +398,96 @@ border-color: var(–gold);
 .cal-section h4 {
 font-family: ‘Cormorant Garamond’, serif; font-size: 18px; font-weight: 300; margin-bottom: 16px;
 }
-.calendar { border: 1px solid var(–border); background: var(–warm-white); }
+.calendar { border: 1px solid rgba(28,28,26,0.12); background: #FAF8F5; }
 .cal-header {
 display: flex; align-items: center; justify-content: space-between;
-padding: 16px 20px; border-bottom: 1px solid var(–border);
+padding: 16px 20px; border-bottom: 1px solid rgba(28,28,26,0.12);
 }
 .cal-month { font-family: ‘Cormorant Garamond’, serif; font-size: 20px; font-weight: 300; }
-.cal-nav { background: none; border: none; cursor: pointer; color: var(–gold); font-size: 18px; padding: 4px 8px; }
+.cal-nav { background: none; border: none; cursor: pointer; color: #B8975A; font-size: 18px; padding: 4px 8px; }
 .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); }
 .cal-day-label {
 text-align: center; padding: 10px 0; font-size: 10px; letter-spacing: 0.1em;
-text-transform: uppercase; color: var(–muted); border-bottom: 1px solid var(–border);
+text-transform: uppercase; color: #5A5750; border-bottom: 1px solid rgba(28,28,26,0.12);
 }
 .cal-day {
 text-align: center; padding: 10px 4px; font-size: 13px; cursor: pointer;
-border-bottom: 1px solid var(–border); border-right: 1px solid var(–border);
+border-bottom: 1px solid rgba(28,28,26,0.12); border-right: 1px solid rgba(28,28,26,0.12);
 transition: background 0.15s; min-height: 44px; display: flex; align-items: center; justify-content: center;
 }
-.cal-day:hover:not(.empty):not(.past) { background: var(–cream); }
-.cal-day.available { color: var(–charcoal); }
+.cal-day:hover:not(.empty):not(.past) { background: #F0EDE8; }
+.cal-day.available { color: #1C1C1A; }
 .cal-day.booked { color: rgba(122,119,112,0.4); text-decoration: line-through; cursor: not-allowed; }
-.cal-day.selected { background: var(–gold); color: var(–warm-white); }
-.cal-day.today { font-weight: 500; color: var(–gold); }
+.cal-day.selected { background: #B8975A; color: #FAF8F5; }
+.cal-day.today { font-weight: 500; color: #B8975A; }
 .cal-day.past { color: rgba(122,119,112,0.3); cursor: not-allowed; }
 .cal-day.empty { cursor: default; }
-.cal-legend { display: flex; gap: 20px; padding: 12px 20px; border-top: 1px solid var(–border); }
-.cal-legend-item { display: flex; gap: 8px; align-items: center; font-size: 11px; color: var(–muted); }
+.cal-legend { display: flex; gap: 20px; padding: 12px 20px; border-top: 1px solid rgba(28,28,26,0.12); }
+.cal-legend-item { display: flex; gap: 8px; align-items: center; font-size: 11px; color: #5A5750; }
 .cal-dot { width: 8px; height: 8px; border-radius: 50%; }
-.cal-dot.avail { background: var(–gold); }
+.cal-dot.avail { background: #B8975A; }
 .cal-dot.taken { background: rgba(122,119,112,0.3); }
 
 /* ── CHECKOUT ── */
-#checkout { background: var(–warm-white); }
+#checkout { background: #FAF8F5; }
 .checkout-layout { display: grid; grid-template-columns: 1fr 400px; gap: 60px; }
 .checkout-form { }
 .checkout-summary {
-background: var(–cream); padding: 40px; position: sticky; top: 120px; height: fit-content;
+background: #F0EDE8; padding: 40px; position: sticky; top: 120px; height: fit-content;
 }
 .summary-title {
 font-family: ‘Cormorant Garamond’, serif; font-size: 22px; font-weight: 300; margin-bottom: 24px;
-padding-bottom: 16px; border-bottom: 1px solid var(–border);
+padding-bottom: 16px; border-bottom: 1px solid rgba(28,28,26,0.12);
 }
 .summary-package {
 display: flex; justify-content: space-between; margin-bottom: 16px;
 }
 .summary-package-name { font-size: 14px; font-weight: 300; }
-.summary-package-price { font-family: ‘Cormorant Garamond’, serif; font-size: 20px; color: var(–gold); }
+.summary-package-price { font-family: ‘Cormorant Garamond’, serif; font-size: 20px; color: #B8975A; }
 .summary-addons { margin-bottom: 20px; }
 .summary-addon {
 display: flex; justify-content: space-between; font-size: 13px;
-color: var(–muted); padding: 8px 0; border-bottom: 1px solid var(–border); font-weight: 300;
+color: #5A5750; padding: 8px 0; border-bottom: 1px solid rgba(28,28,26,0.12); font-weight: 300;
 }
 .summary-total {
 display: flex; justify-content: space-between; align-items: center;
-margin-top: 20px; padding-top: 20px; border-top: 2px solid var(–charcoal);
+margin-top: 20px; padding-top: 20px; border-top: 2px solid #1C1C1A;
 }
 .summary-total-label { font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; }
-.summary-total-amount { font-family: ‘Cormorant Garamond’, serif; font-size: 32px; color: var(–charcoal); }
+.summary-total-amount { font-family: ‘Cormorant Garamond’, serif; font-size: 32px; color: #1C1C1A; }
 .payment-section h3 {
 font-family: ‘Cormorant Garamond’, serif; font-size: 24px; font-weight: 300; margin-bottom: 24px;
 }
 .payment-methods { display: flex; gap: 12px; margin-bottom: 28px; }
 .pay-method {
-flex: 1; padding: 16px; border: 1px solid var(–border); text-align: center;
+flex: 1; padding: 16px; border: 1px solid rgba(28,28,26,0.12); text-align: center;
 cursor: pointer; font-size: 12px; letter-spacing: 0.08em; transition: all 0.2s;
-background: var(–warm-white);
+background: #FAF8F5;
 }
-.pay-method.active { border-color: var(–gold); background: rgba(184,151,90,0.05); }
+.pay-method.active { border-color: #B8975A; background: rgba(184,151,90,0.05); }
 .card-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .card-number { grid-column: 1 / -1; }
 .submit-btn {
 width: 100%; margin-top: 28px; padding: 18px;
-background: var(–charcoal); color: var(–warm-white);
+background: #1C1C1A; color: #FAF8F5;
 font-family: ‘Jost’, sans-serif; font-size: 12px; letter-spacing: 0.25em;
 text-transform: uppercase; border: none; cursor: pointer; transition: background 0.25s;
 }
-.submit-btn:hover { background: var(–gold); }
+.submit-btn:hover { background: #B8975A; }
 .secure-note {
-text-align: center; margin-top: 16px; font-size: 11px; color: var(–muted);
+text-align: center; margin-top: 16px; font-size: 11px; color: #5A5750;
 display: flex; gap: 6px; align-items: center; justify-content: center;
 }
 
 /* ── FOOTER ── */
 footer {
-background: var(–dark); color: var(–warm-white); padding: 80px 60px 40px;
+background: #0E0E0C; color: #FAF8F5; padding: 80px 60px 40px;
 }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
 .footer-brand .nav-logo { display: block; margin-bottom: 16px; font-size: 24px; }
 .footer-tagline { font-size: 13px; color: rgba(250,248,245,0.45); line-height: 1.7; font-weight: 300; max-width: 260px; }
 .footer-col h4 {
-font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(–gold);
+font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: #B8975A;
 margin-bottom: 20px; font-weight: 400;
 }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
@@ -495,7 +495,7 @@ margin-bottom: 20px; font-weight: 400;
 font-size: 13px; color: rgba(250,248,245,0.5); text-decoration: none;
 transition: color 0.2s; font-weight: 300;
 }
-.footer-col ul li a:hover { color: var(–gold); }
+.footer-col ul li a:hover { color: #B8975A; }
 .footer-bottom {
 border-top: 1px solid rgba(255,255,255,0.08); padding-top: 32px;
 display: flex; justify-content: space-between; align-items: center;
@@ -509,16 +509,16 @@ z-index: 200; align-items: center; justify-content: center;
 }
 .success-overlay.show { display: flex; }
 .success-box {
-background: var(–warm-white); padding: 64px; text-align: center; max-width: 500px;
+background: #FAF8F5; padding: 64px; text-align: center; max-width: 500px;
 animation: fadeUp 0.4s ease;
 }
 @keyframes fadeUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 .success-icon { font-size: 48px; margin-bottom: 24px; }
 .success-box h2 {
 font-family: ‘Cormorant Garamond’, serif; font-size: 36px; font-weight: 300;
-margin-bottom: 16px; color: var(–charcoal);
+margin-bottom: 16px; color: #1C1C1A;
 }
-.success-box p { font-size: 14px; color: var(–muted); line-height: 1.7; font-weight: 300; margin-bottom: 32px; }
+.success-box p { font-size: 14px; color: #5A5750; line-height: 1.7; font-weight: 300; margin-bottom: 32px; }
 
 /* ── RESPONSIVE ── */
 @media(max-width: 900px) {
@@ -643,7 +643,7 @@ section { padding: 60px 24px; }
 
   <!-- PORTFOLIO CTA -->
 
-  <section style="background:var(--warm-white);padding:70px 60px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:32px;border-top:1px solid var(--border);">
+  <section style="background:#FAF8F5;padding:70px 60px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:32px;border-top:1px solid rgba(28,28,26,0.12);">
     <div>
       <p class="section-eyebrow">Our Work</p>
       <h2 class="section-title" style="margin-bottom:8px;">See the Quality <em>Yourself</em></h2>
@@ -654,7 +654,7 @@ section { padding: 60px 24px; }
 
   <!-- PACKAGES PREVIEW -->
 
-  <section id="packages" style="background:var(--cream)">
+  <section id="packages" style="background:#F0EDE8">
     <div class="packages-header">
       <p class="section-eyebrow">Transparent Pricing</p>
       <h2 class="section-title">Packages Built for <em>Every</em> Listing</h2>
@@ -755,7 +755,7 @@ section { padding: 60px 24px; }
 
   <section id="testimonials">
     <div>
-      <p class="section-eyebrow" style="color:var(--gold)">Client Love</p>
+      <p class="section-eyebrow" style="color:#B8975A">Client Love</p>
       <h2 class="section-title">What LA Clients Are <em>Saying</em></h2>
     </div>
     <div class="testimonials-layout">
@@ -783,13 +783,13 @@ section { padding: 60px 24px; }
 
   <!-- LEAVE A REVIEW FORM -->
 
-  <section style="background:var(--cream);padding:80px 60px;">
+  <section style="background:#F0EDE8;padding:80px 60px;">
     <div style="max-width:680px;margin:0 auto;text-align:center;">
       <p class="section-eyebrow">Share Your Experience</p>
       <h2 class="section-title">Worked With <em>Esther?</em></h2>
       <div class="divider" style="margin:20px auto;"></div>
       <p style="font-size:14px;color:#3D3B37;font-weight:300;line-height:1.8;margin-bottom:48px;">We'd love to hear about your experience. Leave a quick review below and we may feature it on our website!</p>
-      <div style="background:var(--warm-white);padding:48px;text-align:left;">
+      <div style="background:#FAF8F5;padding:48px;text-align:left;">
         <div class="form-row">
           <div class="form-group"><label>First & Last Name</label><input type="text" id="rv-name" placeholder="Brisa Hurtado"></div>
           <div class="form-group"><label>Company / Brokerage</label><input type="text" id="rv-company" placeholder="Sunrise Realty"></div>
@@ -819,8 +819,8 @@ section { padding: 60px 24px; }
         </div>
         <div class="form-group"><label>Your Review</label><textarea id="rv-message" style="height:130px;" placeholder="Share your experience working with EG Media Co...."></textarea></div>
         <div id="rv-error" style="display:none;color:#c0392b;font-size:13px;margin-bottom:16px;"></div>
-        <div id="rv-success" style="display:none;background:rgba(184,151,90,0.1);border-left:3px solid var(--gold);padding:16px;margin-bottom:16px;">
-          <p style="font-size:14px;color:var(--charcoal);font-weight:300;">✨ Thank you for your review! Esther will read it shortly.</p>
+        <div id="rv-success" style="display:none;background:rgba(184,151,90,0.1);border-left:3px solid #B8975A;padding:16px;margin-bottom:16px;">
+          <p style="font-size:14px;color:#1C1C1A;font-weight:300;">✨ Thank you for your review! Esther will read it shortly.</p>
         </div>
         <button class="btn-primary" style="width:100%;padding:16px;font-size:12px;" onclick="submitReview()">Submit My Review</button>
       </div>
@@ -829,10 +829,10 @@ section { padding: 60px 24px; }
 
   <!-- CTA STRIP -->
 
-  <section style="background:var(--gold); padding:80px 60px; text-align:center;">
+  <section style="background:#B8975A; padding:80px 60px; text-align:center;">
     <p style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(250,248,245,0.7);margin-bottom:16px;">Ready to list?</p>
-    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,52px);font-weight:300;color:var(--warm-white);margin-bottom:32px;">Your Next Listing Deserves <em>Great</em> Media</h2>
-    <a href="#" class="btn-primary" style="background:var(--warm-white);color:var(--charcoal);display:inline-block;" onclick="showPage('booking-page')">Book Your Shoot</a>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,52px);font-weight:300;color:#FAF8F5;margin-bottom:32px;">Your Next Listing Deserves <em>Great</em> Media</h2>
+    <a href="#" class="btn-primary" style="background:#FAF8F5;color:#1C1C1A;display:inline-block;" onclick="showPage('booking-page')">Book Your Shoot</a>
   </section>
 
 </div><!-- end page-home -->
@@ -840,14 +840,14 @@ section { padding: 60px 24px; }
 <!-- ═══════════════ PACKAGES PAGE ═══════════════ -->
 
 <div id="page-packages-page" class="page" style="padding-top:80px">
-  <section style="background:var(--charcoal);padding:80px 60px 60px;text-align:center;">
+  <section style="background:#1C1C1A;padding:80px 60px 60px;text-align:center;">
     <p class="section-eyebrow">EG Media Co.</p>
-    <h1 class="section-title" style="color:var(--warm-white)">Our <em>Packages</em></h1>
+    <h1 class="section-title" style="color:#FAF8F5">Our <em>Packages</em></h1>
     <p style="font-size:14px;color:rgba(250,248,245,0.55);max-width:500px;margin:0 auto;font-weight:300;line-height:1.8;">
       Every package includes professional editing, an online delivery gallery, and MLS-ready files. No contracts, no retainers — just great work, every time.
     </p>
   </section>
-  <section id="packages" style="background:var(--cream)">
+  <section id="packages" style="background:#F0EDE8">
     <div class="packages-grid">
       <div class="package-card">
         <p class="package-tier">Starter</p>
@@ -918,14 +918,14 @@ section { padding: 60px 24px; }
 <!-- ═══════════════ PORTFOLIO PAGE ═══════════════ -->
 
 <div id="page-portfolio-page" class="page" style="padding-top:80px">
-  <section style="background:var(--charcoal);padding:80px 60px 60px;">
+  <section style="background:#1C1C1A;padding:80px 60px 60px;">
     <p class="section-eyebrow">Our Work</p>
-    <h1 class="section-title" style="color:var(--warm-white)"><em>Portfolio</em></h1>
+    <h1 class="section-title" style="color:#FAF8F5"><em>Portfolio</em></h1>
     <p style="font-size:14px;color:rgba(250,248,245,0.55);max-width:480px;font-weight:300;line-height:1.8;">
       From cozy starter homes to stunning luxury estates — every listing gets the same care, craft, and attention.
     </p>
   </section>
-  <section id="portfolio" style="background:var(--warm-white)">
+  <section id="portfolio" style="background:#FAF8F5">
     <div id="listings-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;">
 
 ```
@@ -948,7 +948,7 @@ section { padding: 60px 24px; }
 </div>
 
     <div style="text-align:center;margin-top:60px;">
-  <p style="font-size:13px;color:var(--muted);margin-bottom:24px;font-weight:300;">Ready to see your listing here?</p>
+  <p style="font-size:13px;color:#5A5750;margin-bottom:24px;font-weight:300;">Ready to see your listing here?</p>
   <a href="#" class="btn-primary" onclick="showPage('booking-page')">Book Your Shoot</a>
 </div>
 ```
@@ -959,14 +959,14 @@ section { padding: 60px 24px; }
 <!-- ═══════════════ BOOKING PAGE ═══════════════ -->
 
 <div id="page-booking-page" class="page" style="padding-top:80px">
-  <section style="background:var(--charcoal);padding:80px 60px 60px;">
+  <section style="background:#1C1C1A;padding:80px 60px 60px;">
     <p class="section-eyebrow">Schedule Your Shoot</p>
-    <h1 class="section-title" style="color:var(--warm-white)">Book <em>Your</em> Session</h1>
+    <h1 class="section-title" style="color:#FAF8F5">Book <em>Your</em> Session</h1>
     <p style="font-size:14px;color:rgba(250,248,245,0.55);max-width:480px;font-weight:300;line-height:1.8;">
       Select your package, pick a date, and we'll handle the rest. Most shoots confirmed within 2 hours.
     </p>
   </section>
-  <section id="booking" style="background:var(--cream)">
+  <section id="booking" style="background:#F0EDE8">
     <div class="booking-layout">
       <div class="booking-info">
         <p class="section-eyebrow">How It Works</p>
@@ -990,9 +990,9 @@ section { padding: 60px 24px; }
             <div class="step-text"><h4>Receive Your Media</h4><p>Edited files delivered to your private gallery within 48 hours of shoot completion.</p></div>
           </div>
         </div>
-        <div style="margin-top:40px;padding:28px;background:var(--warm-white);border-left:3px solid var(--gold);">
-          <p style="font-size:13px;color:var(--muted);line-height:1.8;font-weight:300;">
-            <strong style="color:var(--charcoal);font-weight:400;">📍 Service Area:</strong> All of Greater Los Angeles — including Beverly Hills, Silver Lake, Venice, Culver City, Pasadena, Malibu, and surrounding areas. Travel fees may apply beyond 30 miles from LA.
+        <div style="margin-top:40px;padding:28px;background:#FAF8F5;border-left:3px solid #B8975A;">
+          <p style="font-size:13px;color:#5A5750;line-height:1.8;font-weight:300;">
+            <strong style="color:#1C1C1A;font-weight:400;">📍 Service Area:</strong> All of Greater Los Angeles — including Beverly Hills, Silver Lake, Venice, Culver City, Pasadena, Malibu, and surrounding areas. Travel fees may apply beyond 30 miles from LA.
           </p>
         </div>
       </div>
@@ -1016,17 +1016,17 @@ section { padding: 60px 24px; }
       <div class="form-group">
         <label>Add-Ons (optional)</label>
         <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
-          <label style="display:flex;gap:10px;align-items:center;font-size:13px;color:var(--charcoal);font-weight:300;letter-spacing:0;text-transform:none;">
-            <input type="checkbox" value="80" onchange="updateBookingSummary()" style="width:auto;accent-color:var(--gold)"> 3D Virtual Tour (+$80)
+          <label style="display:flex;gap:10px;align-items:center;font-size:13px;color:#1C1C1A;font-weight:300;letter-spacing:0;text-transform:none;">
+            <input type="checkbox" value="80" onchange="updateBookingSummary()" style="width:auto;accent-color:#B8975A"> 3D Virtual Tour (+$80)
           </label>
-          <label style="display:flex;gap:10px;align-items:center;font-size:13px;color:var(--charcoal);font-weight:300;letter-spacing:0;text-transform:none;">
-            <input type="checkbox" value="90" onchange="updateBookingSummary()" style="width:auto;accent-color:var(--gold)"> Drone Pack — 10 shots + video (+$90)
+          <label style="display:flex;gap:10px;align-items:center;font-size:13px;color:#1C1C1A;font-weight:300;letter-spacing:0;text-transform:none;">
+            <input type="checkbox" value="90" onchange="updateBookingSummary()" style="width:auto;accent-color:#B8975A"> Drone Pack — 10 shots + video (+$90)
           </label>
-          <label style="display:flex;gap:10px;align-items:center;font-size:13px;color:var(--charcoal);font-weight:300;letter-spacing:0;text-transform:none;">
-            <input type="checkbox" value="250" onchange="updateBookingSummary()" style="width:auto;accent-color:var(--gold)"> Social Media Reel Pack — 4 videos (+$250)
+          <label style="display:flex;gap:10px;align-items:center;font-size:13px;color:#1C1C1A;font-weight:300;letter-spacing:0;text-transform:none;">
+            <input type="checkbox" value="250" onchange="updateBookingSummary()" style="width:auto;accent-color:#B8975A"> Social Media Reel Pack — 4 videos (+$250)
           </label>
-          <label style="display:flex;gap:10px;align-items:center;font-size:13px;color:var(--charcoal);font-weight:300;letter-spacing:0;text-transform:none;">
-            <input type="checkbox" value="60" onchange="updateBookingSummary()" style="width:auto;accent-color:var(--gold)"> Rush 24hr Delivery (+$60)
+          <label style="display:flex;gap:10px;align-items:center;font-size:13px;color:#1C1C1A;font-weight:300;letter-spacing:0;text-transform:none;">
+            <input type="checkbox" value="60" onchange="updateBookingSummary()" style="width:auto;accent-color:#B8975A"> Rush 24hr Delivery (+$60)
           </label>
         </div>
       </div>
@@ -1034,9 +1034,9 @@ section { padding: 60px 24px; }
       <!-- Calendar -->
       <div class="cal-section">
         <h4>Select a Date & Time</h4>
-        <div style="border:1px solid var(--border);padding:40px;text-align:center;background:var(--warm-white);">
-          <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--charcoal);margin-bottom:12px;">Select Your Date &amp; Time</p>
-          <p style="font-size:13px;color:var(--muted);margin-bottom:28px;font-weight:300;line-height:1.7;">Click below to open the booking calendar and pick your preferred shoot date. You'll be able to select a time and confirm instantly.</p>
+        <div style="border:1px solid rgba(28,28,26,0.12);padding:40px;text-align:center;background:#FAF8F5;">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#1C1C1A;margin-bottom:12px;">Select Your Date &amp; Time</p>
+          <p style="font-size:13px;color:#5A5750;margin-bottom:28px;font-weight:300;line-height:1.7;">Click below to open the booking calendar and pick your preferred shoot date. You'll be able to select a time and confirm instantly.</p>
           <a href="https://calendly.com/egmediacompany" target="_blank" class="btn-primary" style="display:inline-block;text-decoration:none;">Open Booking Calendar &rarr;</a>
         </div>
       </div>
@@ -1070,10 +1070,10 @@ section { padding: 60px 24px; }
       <div class="form-group"><label>Notes (optional)</label><textarea id="bk-notes" placeholder="Gate code, special instructions, specific shots you want..."></textarea></div>
 
       <!-- Total preview -->
-      <div id="booking-total-preview" style="display:none;background:var(--cream);padding:20px;margin-bottom:20px;">
+      <div id="booking-total-preview" style="display:none;background:#F0EDE8;padding:20px;margin-bottom:20px;">
         <div style="display:flex;justify-content:space-between;align-items:center;">
-          <span style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">Estimated Total</span>
-          <span style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);" id="booking-total-amt">$0</span>
+          <span style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#5A5750;">Estimated Total</span>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:28px;color:#B8975A;" id="booking-total-amt">$0</span>
         </div>
       </div>
 
@@ -1089,9 +1089,9 @@ section { padding: 60px 24px; }
 <!-- ═══════════════ CHECKOUT PAGE ═══════════════ -->
 
 <div id="page-checkout-page" class="page" style="padding-top:80px">
-  <section style="background:var(--charcoal);padding:60px 60px 40px;">
+  <section style="background:#1C1C1A;padding:60px 60px 40px;">
     <p class="section-eyebrow">Final Step</p>
-    <h1 class="section-title" style="color:var(--warm-white)">Secure <em>Checkout</em></h1>
+    <h1 class="section-title" style="color:#FAF8F5">Secure <em>Checkout</em></h1>
   </section>
   <section id="checkout">
     <div class="checkout-layout">
@@ -1124,9 +1124,9 @@ section { padding: 60px 24px; }
       </div>
     </div>
 
-    <div style="background:var(--cream);padding:20px;margin:24px 0;border-left:3px solid var(--gold);">
-      <p style="font-size:13px;color:var(--muted);line-height:1.7;font-weight:300;">
-        By completing your booking you agree to our cancellation policy: <strong style="color:var(--charcoal);font-weight:400;">full refund if cancelled 48+ hours before shoot. 50% refund within 24–48 hours. No refund within 24 hours.</strong>
+    <div style="background:#F0EDE8;padding:20px;margin:24px 0;border-left:3px solid #B8975A;">
+      <p style="font-size:13px;color:#5A5750;line-height:1.7;font-weight:300;">
+        By completing your booking you agree to our cancellation policy: <strong style="color:#1C1C1A;font-weight:400;">full refund if cancelled 48+ hours before shoot. 50% refund within 24–48 hours. No refund within 24 hours.</strong>
       </p>
     </div>
 
@@ -1142,13 +1142,13 @@ section { padding: 60px 24px; }
       <span class="summary-package-price" id="co-pkg-price">$549</span>
     </div>
     <div class="summary-addons" id="co-addons"></div>
-    <div style="font-size:13px;color:var(--muted);margin-bottom:12px;" id="co-date-display"></div>
+    <div style="font-size:13px;color:#5A5750;margin-bottom:12px;" id="co-date-display"></div>
     <div class="summary-total">
       <span class="summary-total-label">Total</span>
       <span class="summary-total-amount" id="co-total-display">$549</span>
     </div>
-    <div style="margin-top:28px;padding-top:28px;border-top:1px solid var(--border);">
-      <p style="font-size:11px;color:var(--muted);line-height:1.8;font-weight:300;">
+    <div style="margin-top:28px;padding-top:28px;border-top:1px solid rgba(28,28,26,0.12);">
+      <p style="font-size:11px;color:#5A5750;line-height:1.8;font-weight:300;">
         ✓ Confirmation email sent immediately<br>
         ✓ Shoot prep guide included<br>
         ✓ Gallery delivered within 48 hours<br>
@@ -1370,7 +1370,7 @@ let selectedStars = 0;
 function setStars(val) {
   selectedStars = val;
   document.querySelectorAll('.star').forEach(s => {
-    s.style.color = parseInt(s.dataset.val) <= val ? 'var(--gold)' : '#ccc';
+    s.style.color = parseInt(s.dataset.val) <= val ? '#B8975A' : '#ccc';
   });
 }
 async function submitReview() {
