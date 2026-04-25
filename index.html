@@ -1526,7 +1526,10 @@ function renderListings() {
 
   card.onmouseover = function() { card.style.transform = "translateY(-6px)"; };
   card.onmouseout = function() { card.style.transform = ""; };
-  card.onclick = function() { openLightbox(); };
+  card.style.cursor = "pointer";
+  card.style.webkitTapHighlightColor = "transparent";
+  card.addEventListener("click", function(e) { e.preventDefault(); openLightbox(); });
+  card.addEventListener("touchend", function(e) { e.preventDefault(); openLightbox(); });
 
   grid.appendChild(card);
 }
@@ -1534,7 +1537,7 @@ function renderListings() {
 function openLightbox() {
   lbIdx = 0;
   var lb = document.getElementById("lightbox");
-  lb.style.display = "flex";
+  lb.style.cssText = "display:flex;position:fixed;inset:0;background:rgba(14,14,12,0.96);z-index:500;flex-direction:column;";
   document.body.style.overflow = "hidden";
   updateLightbox();
 }
