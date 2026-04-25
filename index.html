@@ -1440,7 +1440,6 @@ function renderListings() {
   grid.innerHTML = "";
 
   var card = document.createElement("div");
-  card.style.cursor = "pointer";
   card.style.overflow = "hidden";
   card.style.background = "#1C1C1A";
   card.style.transition = "transform 0.3s";
@@ -1499,7 +1498,7 @@ function renderListings() {
   imgWrap.appendChild(textBox);
 
   var footer = document.createElement("div");
-  footer.style.padding = "20px 24px";
+  footer.style.padding = "16px 24px";
   footer.style.display = "flex";
   footer.style.alignItems = "center";
   footer.style.justifyContent = "space-between";
@@ -1512,24 +1511,24 @@ function renderListings() {
   count.style.color = "rgba(250,248,245,0.4)";
   count.textContent = PHOTOS.length + " Photos";
 
-  var viewBtn = document.createElement("span");
+  var viewBtn = document.createElement("button");
+  viewBtn.type = "button";
   viewBtn.style.fontSize = "11px";
   viewBtn.style.letterSpacing = "0.15em";
   viewBtn.style.textTransform = "uppercase";
-  viewBtn.style.color = "#B8975A";
+  viewBtn.style.color = "#FAF8F5";
+  viewBtn.style.background = "#B8975A";
+  viewBtn.style.border = "none";
+  viewBtn.style.padding = "10px 20px";
+  viewBtn.style.cursor = "pointer";
+  viewBtn.style.webkitAppearance = "none";
   viewBtn.textContent = "View Gallery";
+  viewBtn.addEventListener("click", function(e) { e.stopPropagation(); openLightbox(); });
 
   footer.appendChild(count);
   footer.appendChild(viewBtn);
   card.appendChild(imgWrap);
   card.appendChild(footer);
-
-  card.onmouseover = function() { card.style.transform = "translateY(-6px)"; };
-  card.onmouseout = function() { card.style.transform = ""; };
-  card.style.cursor = "pointer";
-  card.style.webkitTapHighlightColor = "transparent";
-  card.addEventListener("click", function(e) { e.preventDefault(); openLightbox(); });
-  card.addEventListener("touchend", function(e) { e.preventDefault(); openLightbox(); });
 
   grid.appendChild(card);
 }
