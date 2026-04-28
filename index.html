@@ -194,13 +194,14 @@ color: #FAF8F5; margin-bottom: 4px;
 .packages-header .divider { margin: 24px auto; }
 .packages-grid {
 display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
-max-width: 1100px; margin: 0 auto; align-items: stretch;
-grid-auto-rows: 1fr;
+max-width: 1100px; margin: 0 auto;
+grid-auto-rows: auto;
 }
 .package-card {
 background: #FAF8F5; padding: 48px 36px;
 position: relative; transition: transform 0.3s, box-shadow 0.3s;
 cursor: pointer; display: flex; flex-direction: column;
+grid-row: 1;
 }
 .package-card .pkg-btn { margin-top: auto; }
 .package-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
