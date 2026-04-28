@@ -483,7 +483,7 @@ display: flex; gap: 6px; align-items: center; justify-content: center;
 footer {
 background: #0E0E0C; color: #FAF8F5; padding: 80px 60px 40px;
 }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 60px; }
 .footer-brand .nav-logo { display: block; margin-bottom: 16px; font-size: 24px; }
 .footer-tagline { font-size: 13px; color: rgba(250,248,245,0.45); line-height: 1.7; font-weight: 300; max-width: 260px; }
 .footer-col h4 {
@@ -556,10 +556,10 @@ section { padding: 60px 24px; }
 <nav>
   <a class="nav-logo" href="#" onclick="showPage('home')">EG <span>Media</span> Co.</a>
   <ul class="nav-links">
-    <li><a href="#" onclick="showPage('home'); scrollTo('about-strip')">About</a></li>
+    <li><a href="#" onclick="showPage('home'); scrollToSection('about-strip')">About</a></li>
     <li><a href="#" onclick="showPage('packages-page')">Packages</a></li>
     <li><a href="#" onclick="showPage('portfolio-page')">Portfolio</a></li>
-    <li><a href="#" onclick="showPage('home'); scrollTo('testimonials')">Reviews</a></li>
+    <li><a href="#" onclick="showPage('home'); scrollToSection('testimonials')">Reviews</a></li>
     <li><a href="#" onclick="showPage('booking-page')">Book</a></li>
     <li><a href="#" onclick="showPage('booking-page')" class="nav-cta">Get Started</a></li>
   </ul>
@@ -676,7 +676,7 @@ section { padding: 60px 24px; }
       <li>2D floor plan</li>
       <li>48-hour delivery</li>
     </ul>
-    <button class="pkg-btn" onclick="window.open('https://square.link/u/nNLikW2u','_blank')">Book This Package</button>
+    <button class="pkg-btn" onclick="selectPackage('Essential', 200)">Book This Package</button>
   </div>
 
   <!-- SIGNATURE -->
@@ -696,7 +696,7 @@ section { padding: 60px 24px; }
       <li>2D floor plan</li>
       <li>48-hour delivery</li>
     </ul>
-    <button class="pkg-btn" onclick="window.open('https://square.link/u/LDYj5vTG','_blank')">Book This Package</button>
+    <button class="pkg-btn" onclick="selectPackage('Signature', 450)">Book This Package</button>
   </div>
 
   <!-- LUXURY -->
@@ -715,7 +715,7 @@ section { padding: 60px 24px; }
       <li>2D floor plan</li>
       <li>24-hour priority delivery</li>
     </ul>
-    <button class="pkg-btn" onclick="window.open('https://square.link/u/S5qRgci1','_blank')">Book This Package</button>
+    <button class="pkg-btn" onclick="selectPackage('Luxury', 650)">Book This Package</button>
   </div>
 </div>
 
@@ -861,7 +861,7 @@ section { padding: 60px 24px; }
           <li>48-hour delivery</li>
           <li>1 round of edit revisions</li>
         </ul>
-        <button class="pkg-btn" onclick="window.open('https://square.link/u/nNLikW2u','_blank')">Select & Book</button>
+        <button class="pkg-btn" onclick="selectPackage('Essential', 200)">Select & Book</button>
       </div>
       <div class="package-card featured">
         <span class="package-badge">Most Popular</span>
@@ -880,7 +880,7 @@ section { padding: 60px 24px; }
           <li>48-hour delivery</li>
           <li>2 rounds of edit revisions</li>
         </ul>
-        <button class="pkg-btn" onclick="window.open('https://square.link/u/LDYj5vTG','_blank')">Select & Book</button>
+        <button class="pkg-btn" onclick="selectPackage('Signature', 450)">Select & Book</button>
       </div>
       <div class="package-card">
         <p class="package-tier">Premium</p>
@@ -898,7 +898,7 @@ section { padding: 60px 24px; }
           <li>24-hour priority delivery</li>
           <li>Unlimited revisions</li>
         </ul>
-        <button class="pkg-btn" onclick="window.open('https://square.link/u/S5qRgci1','_blank')">Select & Book</button>
+        <button class="pkg-btn" onclick="selectPackage('Luxury', 650)">Select & Book</button>
       </div>
     </div>
     <div class="addons-section">
@@ -1102,18 +1102,35 @@ section { padding: 60px 24px; }
       <!-- Add-ons -->
       <div class="form-group">
         <label>Add-Ons (optional)</label>
-        <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
-          <label style="display:flex;gap:10px;align-items:center;font-size:13px;color:#1C1C1A;font-weight:300;letter-spacing:0;text-transform:none;">
-            <input type="checkbox" value="80" onchange="updateBookingSummary()" style="width:20px;height:20px;accent-color:#B8975A;cursor:pointer;flex-shrink:0;"> 3D Virtual Tour (+$80)
+        <style>
+          .custom-cb { display:flex; gap:14px; align-items:center; cursor:pointer; padding:12px 0; border-bottom:1px solid rgba(28,28,26,0.08); }
+          .custom-cb input { display:none; }
+          .cb-box { width:24px; height:24px; border:2px solid #B8975A; border-radius:4px; flex-shrink:0; display:flex; align-items:center; justify-content:center; background:#FAF8F5; transition:background 0.2s; }
+          .custom-cb input:checked + .cb-box { background:#B8975A; }
+          .cb-check { display:none; color:#FAF8F5; font-size:16px; font-weight:bold; }
+          .custom-cb input:checked + .cb-box .cb-check { display:block; }
+          .cb-label { font-size:13px; color:#1C1C1A; font-weight:300; }
+        </style>
+        <div style="display:flex;flex-direction:column;margin-top:4px;">
+          <label class="custom-cb">
+            <input type="checkbox" value="80" onchange="updateBookingSummary()">
+            <div class="cb-box"><span class="cb-check">✓</span></div>
+            <span class="cb-label">3D Virtual Tour (+$80)</span>
           </label>
-          <label style="display:flex;gap:10px;align-items:center;font-size:13px;color:#1C1C1A;font-weight:300;letter-spacing:0;text-transform:none;">
-            <input type="checkbox" value="90" onchange="updateBookingSummary()" style="width:20px;height:20px;accent-color:#B8975A;cursor:pointer;flex-shrink:0;"> Drone Pack — 10 shots + video (+$90)
+          <label class="custom-cb">
+            <input type="checkbox" value="90" onchange="updateBookingSummary()">
+            <div class="cb-box"><span class="cb-check">✓</span></div>
+            <span class="cb-label">Drone Pack — 10 shots + video (+$90)</span>
           </label>
-          <label style="display:flex;gap:10px;align-items:center;font-size:13px;color:#1C1C1A;font-weight:300;letter-spacing:0;text-transform:none;">
-            <input type="checkbox" value="250" onchange="updateBookingSummary()" style="width:20px;height:20px;accent-color:#B8975A;cursor:pointer;flex-shrink:0;"> Social Media Reel Pack — 4 videos (+$250)
+          <label class="custom-cb">
+            <input type="checkbox" value="250" onchange="updateBookingSummary()">
+            <div class="cb-box"><span class="cb-check">✓</span></div>
+            <span class="cb-label">Social Media Reel Pack — 4 videos (+$250)</span>
           </label>
-          <label style="display:flex;gap:10px;align-items:center;font-size:13px;color:#1C1C1A;font-weight:300;letter-spacing:0;text-transform:none;">
-            <input type="checkbox" value="60" onchange="updateBookingSummary()" style="width:20px;height:20px;accent-color:#B8975A;cursor:pointer;flex-shrink:0;"> Rush 24hr Delivery (+$60)
+          <label class="custom-cb">
+            <input type="checkbox" value="60" onchange="updateBookingSummary()">
+            <div class="cb-box"><span class="cb-check">✓</span></div>
+            <span class="cb-label">Rush 24hr Delivery (+$60)</span>
           </label>
         </div>
       </div>
@@ -1178,61 +1195,24 @@ section { padding: 60px 24px; }
 <div id="page-checkout-page" class="page" style="padding-top:80px">
   <section style="background:#1C1C1A;padding:60px 60px 40px;">
     <p class="section-eyebrow">Final Step</p>
-    <h1 class="section-title" style="color:#FAF8F5">Secure <em>Checkout</em></h1>
+    <h1 class="section-title" style="color:#FAF8F5">Review & <em>Pay</em></h1>
   </section>
   <section id="checkout">
-    <div class="checkout-layout">
-      <!-- PAYMENT FORM -->
-      <div class="checkout-form">
-        <div class="payment-section">
-          <h3>Payment Details</h3>
-          <div class="payment-methods">
-            <div class="pay-method active" onclick="selectPayMethod(this)">💳 Credit Card</div>
-            <div class="pay-method" onclick="selectPayMethod(this)">🍎 Apple Pay</div>
-            <div class="pay-method" onclick="selectPayMethod(this)">🅿️ PayPal</div>
-          </div>
-          <div id="card-form">
-            <div class="form-group card-number"><label>Card Number</label><input type="text" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCard(this)"></div>
-            <div class="card-fields">
-              <div class="form-group"><label>Expiry Date</label><input type="text" placeholder="MM / YY" maxlength="7"></div>
-              <div class="form-group"><label>CVV</label><input type="text" placeholder="123" maxlength="4"></div>
-            </div>
-            <div class="form-group"><label>Name on Card</label><input type="text" placeholder="Emma Rodriguez"></div>
-          </div>
-        </div>
+    <div style="max-width:600px;margin:0 auto;">
 
 ```
-    <div style="margin-top:40px;">
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;margin-bottom:24px;">Billing Address</h3>
-      <div class="form-group"><label>Street Address</label><input type="text" placeholder="456 Wilshire Blvd"></div>
-      <div class="form-row">
-        <div class="form-group"><label>City</label><input type="text" value="Los Angeles"></div>
-        <div class="form-group"><label>ZIP</label><input type="text" placeholder="90036"></div>
-      </div>
-    </div>
-
-    <div style="background:#F0EDE8;padding:20px;margin:24px 0;border-left:3px solid #B8975A;">
-      <p style="font-size:13px;color:#5A5750;line-height:1.7;font-weight:300;">
-        By completing your booking you agree to our cancellation policy: <strong style="color:#1C1C1A;font-weight:400;">full refund if cancelled 48+ hours before shoot. 50% refund within 24–48 hours. No refund within 24 hours.</strong>
-      </p>
-    </div>
-
-    <button class="submit-btn" onclick="completeBooking()">Confirm & Pay — <span id="co-total">$0</span></button>
-    <div class="secure-note">🔒 Secured by 256-bit SSL encryption</div>
-  </div>
-
   <!-- ORDER SUMMARY -->
-  <div class="checkout-summary">
+  <div class="checkout-summary" style="position:static;margin-bottom:24px;">
     <h3 class="summary-title">Order Summary</h3>
     <div class="summary-package">
       <span class="summary-package-name" id="co-pkg-name">Signature Package</span>
-      <span class="summary-package-price" id="co-pkg-price">$549</span>
+      <span class="summary-package-price" id="co-pkg-price">$450</span>
     </div>
     <div class="summary-addons" id="co-addons"></div>
     <div style="font-size:13px;color:#5A5750;margin-bottom:12px;" id="co-date-display"></div>
     <div class="summary-total">
       <span class="summary-total-label">Total</span>
-      <span class="summary-total-amount" id="co-total-display">$549</span>
+      <span class="summary-total-amount" id="co-total-display">$450</span>
     </div>
     <div style="margin-top:28px;padding-top:28px;border-top:1px solid rgba(28,28,26,0.12);">
       <p style="font-size:11px;color:#5A5750;line-height:1.8;font-weight:300;">
@@ -1243,6 +1223,26 @@ section { padding: 60px 24px; }
       </p>
     </div>
   </div>
+
+  <!-- CANCELLATION POLICY -->
+  <div style="background:#F0EDE8;padding:20px;margin-bottom:24px;border-left:3px solid #B8975A;">
+    <p style="font-size:13px;color:#5A5750;line-height:1.7;font-weight:300;">
+      By proceeding you agree to our cancellation policy: <strong style="color:#1C1C1A;font-weight:400;">Full refund if cancelled 48+ hours before shoot. 50% refund if cancelled within 24–48 hours.</strong>
+    </p>
+  </div>
+
+  <!-- PREP GUIDE -->
+  <div style="background:#1C1C1A;padding:24px;margin-bottom:24px;text-align:center;">
+    <p style="font-size:13px;color:rgba(250,248,245,0.65);font-weight:300;margin-bottom:16px;line-height:1.7;">📋 Before your shoot, please review our Listing Shoot Prep Guide to ensure everything goes smoothly on the day.</p>
+    <a href="https://egmediaco.netlify.app/prep-guide" target="_blank" style="display:inline-block;background:#B8975A;color:#FAF8F5;padding:12px 32px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;">View Shoot Prep Guide →</a>
+  </div>
+
+  <!-- PAY BUTTON -->
+  <button class="submit-btn" onclick="completeBooking()" style="font-size:14px;padding:20px;letter-spacing:0.15em;">
+    Pay Securely with Square — <span id="co-total">$0</span>
+  </button>
+  <div class="secure-note" style="margin-top:16px;">🔒 Payments processed securely by Square. Accepts Apple Pay, Google Pay & all major cards.</div>
+
 </div>
 ```
 
@@ -1282,9 +1282,17 @@ section { padding: 60px 24px; }
       <h4>Company</h4>
       <ul>
         <li><a href="#" onclick="showPage('portfolio-page')">Portfolio</a></li>
-        <li><a href="#" onclick="showPage('home'); scrollTo('about-strip')">About</a></li>
-        <li><a href="#" onclick="showPage('home'); scrollTo('testimonials')">Reviews</a></li>
+        <li><a href="#" onclick="showPage('home'); scrollToSection('about-strip')">About</a></li>
+        <li><a href="#" onclick="showPage('home'); scrollToSection('testimonials')">Reviews</a></li>
         <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="https://egmediaco.netlify.app/prep-guide" target="_blank">Shoot Prep Guide</a></li>
+        <li><a href="https://calendly.com/egmediacompany" target="_blank">Book a Shoot</a></li>
+        <li><a href="mailto:egmediacompany@gmail.com">Contact Us</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1310,7 +1318,7 @@ function showPage(page) {
   const el = document.getElementById('page-' + page);
   if (el) { el.classList.add('active'); window.scrollTo(0,0); }
 }
-function scrollTo(id) {
+function scrollToSection(id) {
   setTimeout(() => { const el = document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth'}); }, 100);
 }
 
@@ -1444,7 +1452,14 @@ function formatCard(input) {
 
 // ── COMPLETE BOOKING ──
 function completeBooking() {
-  document.getElementById('success-overlay').classList.add('show');
+  var pkg = document.getElementById('bk-package').value;
+  var squareLinks = {
+    'Essential|200': 'https://square.link/u/nNLikW2u',
+    'Signature|450': 'https://square.link/u/LDYj5vTG',
+    'Luxury|650': 'https://square.link/u/S5qRgci1',
+  };
+  var link = squareLinks[pkg] || 'https://square.link/u/nNLikW2u';
+  window.open(link, '_blank');
 }
 function closeSuccess() {
   document.getElementById('success-overlay').classList.remove('show');
