@@ -1104,16 +1104,16 @@ section { padding: 60px 24px; }
         <label>Add-Ons (optional)</label>
         <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
           <label style="display:flex;gap:10px;align-items:center;font-size:13px;color:#1C1C1A;font-weight:300;letter-spacing:0;text-transform:none;">
-            <input type="checkbox" value="80" onchange="updateBookingSummary()" style="width:auto;accent-color:#B8975A"> 3D Virtual Tour (+$80)
+            <input type="checkbox" value="80" onchange="updateBookingSummary()" style="width:20px;height:20px;accent-color:#B8975A;cursor:pointer;flex-shrink:0;"> 3D Virtual Tour (+$80)
           </label>
           <label style="display:flex;gap:10px;align-items:center;font-size:13px;color:#1C1C1A;font-weight:300;letter-spacing:0;text-transform:none;">
-            <input type="checkbox" value="90" onchange="updateBookingSummary()" style="width:auto;accent-color:#B8975A"> Drone Pack — 10 shots + video (+$90)
+            <input type="checkbox" value="90" onchange="updateBookingSummary()" style="width:20px;height:20px;accent-color:#B8975A;cursor:pointer;flex-shrink:0;"> Drone Pack — 10 shots + video (+$90)
           </label>
           <label style="display:flex;gap:10px;align-items:center;font-size:13px;color:#1C1C1A;font-weight:300;letter-spacing:0;text-transform:none;">
-            <input type="checkbox" value="250" onchange="updateBookingSummary()" style="width:auto;accent-color:#B8975A"> Social Media Reel Pack — 4 videos (+$250)
+            <input type="checkbox" value="250" onchange="updateBookingSummary()" style="width:20px;height:20px;accent-color:#B8975A;cursor:pointer;flex-shrink:0;"> Social Media Reel Pack — 4 videos (+$250)
           </label>
           <label style="display:flex;gap:10px;align-items:center;font-size:13px;color:#1C1C1A;font-weight:300;letter-spacing:0;text-transform:none;">
-            <input type="checkbox" value="60" onchange="updateBookingSummary()" style="width:auto;accent-color:#B8975A"> Rush 24hr Delivery (+$60)
+            <input type="checkbox" value="60" onchange="updateBookingSummary()" style="width:20px;height:20px;accent-color:#B8975A;cursor:pointer;flex-shrink:0;"> Rush 24hr Delivery (+$60)
           </label>
         </div>
       </div>
@@ -1282,8 +1282,8 @@ section { padding: 60px 24px; }
       <h4>Company</h4>
       <ul>
         <li><a href="#" onclick="showPage('portfolio-page')">Portfolio</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Reviews</a></li>
+        <li><a href="#" onclick="showPage('home'); scrollTo('about-strip')">About</a></li>
+        <li><a href="#" onclick="showPage('home'); scrollTo('testimonials')">Reviews</a></li>
         <li><a href="#">FAQ</a></li>
       </ul>
     </div>
