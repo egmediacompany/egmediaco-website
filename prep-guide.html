@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shoot Prep Guide — EG Media Co.</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Jost',sans-serif; background:#FAF8F5; color:#1C1C1A; }
+
+.header {
+background:#1C1C1A; padding:48px 40px; text-align:center;
+}
+.header-logo {
+font-family:‘Cormorant Garamond’,serif; font-size:14px; font-weight:300;
+letter-spacing:0.3em; text-transform:uppercase; color:#B8975A; margin-bottom:16px;
+}
+.header h1 {
+font-family:‘Cormorant Garamond’,serif; font-size:36px; font-weight:300;
+color:#FAF8F5; margin-bottom:8px;
+}
+.header p { font-size:13px; color:rgba(250,248,245,0.5); font-weight:300; }
+
+.container { max-width:720px; margin:0 auto; padding:48px 32px; }
+
+.intro {
+font-size:14px; font-weight:300; line-height:1.9; color:#5A5750;
+margin-bottom:40px; padding-bottom:32px; border-bottom:1px solid rgba(28,28,26,0.1);
+}
+
+.section { margin-bottom:40px; }
+.section-num {
+font-size:10px; letter-spacing:0.3em; text-transform:uppercase;
+color:#B8975A; font-weight:400; margin-bottom:8px;
+}
+.section h2 {
+font-family:‘Cormorant Garamond’,serif; font-size:24px; font-weight:300;
+color:#1C1C1A; margin-bottom:16px; padding-bottom:12px;
+border-bottom:1px solid rgba(184,151,90,0.3);
+}
+.section p { font-size:14px; font-weight:300; line-height:1.9; color:#1C1C1A; margin-bottom:12px; }
+
+.bullet-list { list-style:none; margin:12px 0 16px; }
+.bullet-list li {
+font-size:14px; font-weight:300; line-height:1.8; color:#1C1C1A;
+padding:6px 0 6px 24px; position:relative; border-bottom:1px solid rgba(28,28,26,0.06);
+}
+.bullet-list li::before { content:’—’; position:absolute; left:0; color:#B8975A; }
+
+.checklist { list-style:none; margin:12px 0 16px; }
+.checklist li {
+font-size:14px; font-weight:300; line-height:1.8; color:#1C1C1A;
+padding:8px 0 8px 36px; position:relative; border-bottom:1px solid rgba(28,28,26,0.06);
+display:flex; align-items:center; gap:12px;
+}
+.checkbox {
+width:20px; height:20px; border:2px solid #B8975A; border-radius:3px;
+flex-shrink:0; display:inline-block;
+}
+
+.note {
+background:#FFF8F0; border-left:4px solid #B8975A;
+padding:20px 24px; margin:20px 0; border-radius:0 4px 4px 0;
+}
+.note-label {
+font-size:10px; letter-spacing:0.2em; text-transform:uppercase;
+color:#B8975A; font-weight:500; margin-bottom:8px;
+}
+.note p { font-size:13px; line-height:1.8; color:#1C1C1A; font-weight:300; }
+.note strong { font-weight:500; color:#1C1C1A; }
+
+.warning {
+background:#FFF3F0; border-left:4px solid #C0392B;
+padding:20px 24px; margin:20px 0; border-radius:0 4px 4px 0;
+}
+.warning-label {
+font-size:10px; letter-spacing:0.2em; text-transform:uppercase;
+color:#C0392B; font-weight:500; margin-bottom:8px;
+}
+.warning p { font-size:13px; line-height:1.8; color:#1C1C1A; font-weight:300; }
+.warning strong { font-weight:500; }
+
+.sub-heading {
+font-size:12px; letter-spacing:0.15em; text-transform:uppercase;
+color:#1C1C1A; font-weight:500; margin:20px 0 10px;
+}
+
+.contact-block {
+background:#1C1C1A; padding:32px; margin-top:48px; text-align:center;
+}
+.contact-block p {
+font-size:13px; color:rgba(250,248,245,0.6); margin-bottom:16px; font-weight:300;
+}
+.contact-item {
+font-size:14px; color:#B8975A; margin-bottom:8px; font-weight:300;
+}
+
+.footer {
+text-align:center; padding:32px; border-top:1px solid rgba(28,28,26,0.1);
+margin-top:48px;
+}
+.footer p {
+font-family:‘Cormorant Garamond’,serif; font-size:16px; font-weight:300;
+font-style:italic; color:#5A5750; margin-bottom:8px;
+}
+.footer span { font-size:13px; color:#B8975A; font-weight:300; }
+
+.print-btn {
+display:block; width:fit-content; margin:0 auto 32px;
+background:#B8975A; color:#FAF8F5; padding:14px 36px;
+font-family:‘Jost’,sans-serif; font-size:11px; letter-spacing:0.2em;
+text-transform:uppercase; border:none; cursor:pointer; text-decoration:none;
+}
+@media print { .print-btn { display:none; } }
+@media(max-width:600px) { .container { padding:32px 20px; } .header { padding:36px 24px; } }
+body, p, li, h1, h2, span, div { -webkit-text-fill-color: inherit; }
+.container { background:#FAF8F5; }
+@media (prefers-color-scheme: dark) {
+body { background:#FAF8F5 !important; color:#1C1C1A !important; }
+.container { background:#FAF8F5 !important; }
+p, li, h2 { color:#1C1C1A !important; -webkit-text-fill-color:#1C1C1A !important; }
+.intro { color:#5A5750 !important; -webkit-text-fill-color:#5A5750 !important; }
+.bullet-list li, .checklist li { color:#1C1C1A !important; -webkit-text-fill-color:#1C1C1A !important; }
+.note p, .warning p { color:#1C1C1A !important; -webkit-text-fill-color:#1C1C1A !important; }
+.note { background:#FFF8F0 !important; }
+.warning { background:#FFF3F0 !important; }
+.section-num, .note-label, .warning-label, .contact-item, .footer span { color:#B8975A !important; -webkit-text-fill-color:#B8975A !important; }
+.header { background:#1C1C1A !important; }
+.header h1 { color:#FAF8F5 !important; -webkit-text-fill-color:#FAF8F5 !important; }
+.header p.header-logo { color:#B8975A !important; -webkit-text-fill-color:#B8975A !important; }
+.header p:not(.header-logo) { color:rgba(250,248,245,0.5) !important; -webkit-text-fill-color:rgba(250,248,245,0.5) !important; }
+.contact-block { background:#1C1C1A !important; }
+.contact-block p { color:rgba(250,248,245,0.6) !important; -webkit-text-fill-color:rgba(250,248,245,0.6) !important; }
+.sub-heading { color:#1C1C1A !important; -webkit-text-fill-color:#1C1C1A !important; }
+.section h2 { color:#1C1C1A !important; -webkit-text-fill-color:#1C1C1A !important; }
+.footer p { color:#5A5750 !important; -webkit-text-fill-color:#5A5750 !important; }
+.print-btn { background:#B8975A !important; color:#FAF8F5 !important; -webkit-text-fill-color:#FAF8F5 !important; }
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+  <p class="header-logo">EG Media Co.</p>
+  <h1>Listing Shoot Prep Guide</h1>
+  <p>Please review before your scheduled shoot</p>
+</div>
+
+<div class="container">
+
+<a class="print-btn" href="https://egmediaco.netlify.app/shoot_prep_guide.pdf" target="_blank">Download Prep Guide (PDF)</a>
+
+  <p class="intro">
+    Thank you for choosing EG Media Co. We're so excited to capture your listing beautifully. To ensure we make the most of our time together and deliver stunning results, please review the following guidelines carefully before your scheduled shoot.
+  </p>
+
+  <!-- Section 1 -->
+
+  <div class="section">
+    <p class="section-num">01</p>
+    <h2>Property Presentation</h2>
+    <p>Our goal is to photograph your listing in its best possible light. Please ensure the property is clean, tidy, and ready to be photographed <strong>as-is</strong> prior to our arrival. Our team will assist with minor adjustments on-site, including:</p>
+    <ul class="bullet-list">
+      <li>Opening blinds and curtains to maximize natural light</li>
+      <li>Turning on interior lights for a warm, inviting atmosphere</li>
+      <li>Removing small items from countertops and surfaces that may be distracting</li>
+      <li>Making minor compositional adjustments within the frame</li>
+    </ul>
+    <div class="note">
+      <p class="note-label">Please Note</p>
+      <p>EG Media Co. is a professional photography and media service — <strong>not a cleaning or staging service.</strong> We kindly ask that the property be prepared prior to our arrival. We are happy to make light, thoughtful adjustments within the frame, however we are unable to clean, organize, or remove excessive clutter or trash. <strong>Listings will be photographed in the condition they are in upon our arrival.</strong></p>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+
+  <div class="section">
+    <p class="section-num">02</p>
+    <h2>Pre-Shoot Checklist</h2>
+    <p class="sub-heading">Interior</p>
+    <ul class="checklist">
+      <li><span class="checkbox"></span> All rooms tidied and decluttered</li>
+      <li><span class="checkbox"></span> Beds made and linens straightened</li>
+      <li><span class="checkbox"></span> Dishes cleared from sinks and countertops</li>
+      <li><span class="checkbox"></span> Personal items (toiletries, medications) stored away</li>
+      <li><span class="checkbox"></span> Trash bins emptied or removed from frame</li>
+    </ul>
+    <p class="sub-heading">Exterior</p>
+    <ul class="checklist">
+      <li><span class="checkbox"></span> Driveway and walkways cleared of vehicles if possible</li>
+      <li><span class="checkbox"></span> Trash cans moved out of view</li>
+      <li><span class="checkbox"></span> Hoses, tools, and equipment stored away</li>
+    </ul>
+  </div>
+
+  <!-- Section 3 -->
+
+  <div class="section">
+    <p class="section-num">03</p>
+    <h2>Property Access & Entry</h2>
+    <p>To ensure a smooth and timely shoot, <strong>please provide all access information at least 24 hours before your scheduled appointment.</strong> This includes:</p>
+    <ul class="bullet-list">
+      <li>Lockbox code and location on the property</li>
+      <li>Whether the property requires Supra eKey access — please notify us in advance so we can coordinate accordingly</li>
+      <li>Gate or community entry codes if applicable</li>
+      <li>Any special instructions for entering the property</li>
+    </ul>
+    <div class="warning">
+      <p class="warning-label">Important — Access Policy</p>
+      <p>Out of respect for our schedule and other clients, if we arrive at the property and are unable to gain entry, we will make every effort to reach you. <strong>If we are unable to establish communication or gain access within 15 minutes of arrival, the appointment will be cancelled.</strong> In this case, a <strong>50% refund</strong> will be issued to account for travel time and the reserved appointment slot. Please ensure all access information is confirmed prior to your shoot date.</p>
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+
+  <div class="section">
+    <p class="section-num">04</p>
+    <h2>Day of Shoot</h2>
+    <ul class="bullet-list">
+      <li>Please ensure the property is accessible at your scheduled start time</li>
+      <li>If you or a representative plan to be present, we welcome it — just give us space to work our magic!</li>
+      <li>If any last-minute changes arise, please contact us as soon as possible</li>
+    </ul>
+  </div>
+
+  <!-- Section 5 -->
+
+  <div class="section">
+    <p class="section-num">05</p>
+    <h2>Delivery & Next Steps</h2>
+    <p>Your edited photos and media will be delivered to your private online gallery within <strong>48 hours</strong> of the shoot (or within <strong>24 hours</strong> if Rush Delivery was selected). You'll receive an email with your download link as soon as your gallery is ready.</p>
+  </div>
+
+  <div class="contact-block">
+    <p>Questions before your shoot? We're here to help.</p>
+    <p class="contact-item">📧 egmediacompany@gmail.com</p>
+    <p class="contact-item">📞 (747) 200-7197</p>
+    <p class="contact-item">📸 @egmediaco</p>
+  </div>
+
+  <div class="footer">
+    <p>"We look forward to creating something beautiful for your listing."</p>
+    <span>— Esther, EG Media Co.</span>
+  </div>
+
+</div>
+</body>
+</html>
